@@ -1,0 +1,36 @@
+{
+  "task_model": "DeformableDETR",
+  "display_name": "DeformableDETR",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.47,
+  "rd_points": [
+    {
+      "lambda": 2.5,
+      "bpp": 0.003992620389908552,
+      "value": 0.0,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.004338254686444998,
+      "value": 0.0,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.005989833269268274,
+      "value": 0.0,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "6b8fb2955c",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

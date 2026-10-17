@@ -1,0 +1,84 @@
+{
+  "task_model": "DINOSWIN-L",
+  "display_name": "DINOSWIN-L",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.583,
+  "rd_points": [
+    {
+      "lambda": 0.078125,
+      "bpp": 0.04030517861247063,
+      "value": 0.338,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.15625,
+      "bpp": 0.05723246932029724,
+      "value": 0.411,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.3125,
+      "bpp": 0.08562352508306503,
+      "value": 0.47,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.4419417381286621,
+      "bpp": 0.10429340600967407,
+      "value": 0.491,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.625,
+      "bpp": 0.12585681676864624,
+      "value": 0.506,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.8838834762573242,
+      "bpp": 0.15047359466552734,
+      "value": 0.518,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.1780855804681778,
+      "value": 0.528,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.2417348325252533,
+      "value": 0.541,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.31718987226486206,
+      "value": 0.548,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.40719231963157654,
+      "value": 0.551,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 20.0,
+      "bpp": 0.5229952931404114,
+      "value": 0.553,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "3ac1855142",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

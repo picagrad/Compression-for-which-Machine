@@ -1,0 +1,102 @@
+{
+  "task_model": "RetinaNet",
+  "display_name": "RetinaNet",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.395,
+  "rd_points": [
+    {
+      "lambda": 0.078125,
+      "bpp": 0.03743559122085571,
+      "value": 0.201,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.15625,
+      "bpp": 0.05671121925115585,
+      "value": 0.28,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.3125,
+      "bpp": 0.08962803333997726,
+      "value": 0.334,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.37162721157073975,
+      "bpp": 0.10033107548952103,
+      "value": 0.344,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.4419417381286621,
+      "bpp": 0.11211685836315155,
+      "value": 0.35,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.5255602598190308,
+      "bpp": 0.12504388391971588,
+      "value": 0.357,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.625,
+      "bpp": 0.13917943835258484,
+      "value": 0.364,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.8838834762573242,
+      "bpp": 0.17118608951568604,
+      "value": 0.372,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.20831477642059326,
+      "value": 0.377,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.7677669525146484,
+      "bpp": 0.2508309781551361,
+      "value": 0.383,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.2990108132362366,
+      "value": 0.386,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.41310229897499084,
+      "value": 0.391,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.5549507737159729,
+      "value": 0.392,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 20.0,
+      "bpp": 0.736082911491394,
+      "value": 0.393,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "16a49ef2fc",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

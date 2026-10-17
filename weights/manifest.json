@@ -1,0 +1,1962 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "name": "SegKNetUPerResNet.ckpt",
+      "size": 83878969,
+      "sha256": "e790eb4076b471dfa66b199fe4449b50809a43ba5b75e236e56c52c527b2bdbe",
+      "task_model": "SegKNetUPerResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegKNetUPerResNet.json",
+        "run_hash": "e1d87272c2",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 200,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 199,
+      "global_step": 101200,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegKNetUPerResNet --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegKNetUPerResNet.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegKNetUPerResNet --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 200 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegKNetUPerResNet_lambda5"
+    },
+    {
+      "name": "SegMask2FormerResNet_lambda30.ckpt",
+      "size": 83884029,
+      "sha256": "87ac9988cea489c0621815318d43f1bef1691844c1919e86e0da78413e625d66",
+      "task_model": "SegMask2FormerResNet",
+      "lambda_ref": 30.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegMask2FormerResNet_lambda30.json",
+        "run_hash": "8eec8dc9a2",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 200,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 199,
+      "global_step": 101200,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegMask2FormerResNet --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegMask2FormerResNet_lambda30.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegMask2FormerResNet --data_root ${DATA_ADE} --lambda_ref 30.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 200 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegMask2FormerResNet_lambda30"
+    },
+    {
+      "name": "SegMaskFormerResNet_lambda30.ckpt",
+      "size": 83883650,
+      "sha256": "7b0bca41ad0b5494fcd3d26628d5785363d6f15f6c5ad97baf7702c756db6935",
+      "task_model": "SegMaskFormerResNet",
+      "lambda_ref": 30.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegMaskFormerResNet_lambda30.json",
+        "run_hash": "2f2428c2f6",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 200,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 199,
+      "global_step": 101200,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegMaskFormerResNet --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegMaskFormerResNet_lambda30.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegMaskFormerResNet --data_root ${DATA_ADE} --lambda_ref 30.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 200 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegMaskFormerResNet_lambda30"
+    },
+    {
+      "name": "SegUperNetResNet.ckpt",
+      "size": 83875710,
+      "sha256": "dacc13597e4259c5df3005cc395af79facad095b318ce16eb11f729f7d913b15",
+      "task_model": "SegUperNetResNet",
+      "lambda_ref": 50.0,
+      "lambda_range": [
+        0.01,
+        10.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegUperNetResNet.json",
+        "run_hash": "a3dc3a1ac2",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 200,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 199,
+      "global_step": 101200,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegUperNetResNet --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegUperNetResNet.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegUperNetResNet --data_root ${DATA_ADE} --lambda_ref 50.0 --lambda_min 0.01 --lambda_max 10.0 --epochs 200 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegUperNetResNet_lambda50"
+    },
+    {
+      "name": "SegMaskFormerSWIN.ckpt",
+      "size": 85554375,
+      "sha256": "ba1e5fcc49a834bcc29fc6151ec8ef85ce74eb71b455777c0e0f0fde2270443b",
+      "task_model": "SegMaskFormerSWIN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegMaskFormerSWIN.json",
+        "run_hash": "fe8609b0ef",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 50600,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegMaskFormerSWIN --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegMaskFormerSWIN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegMaskFormerSWIN --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegMaskFormerSWIN_lambda5"
+    },
+    {
+      "name": "SegMask2FormerSWIN.ckpt",
+      "size": 85555336,
+      "sha256": "04dec226daceb8c362fb9323a3f3e4e0fbdbf153ab7c08010e493a8f8da1cb79",
+      "task_model": "SegMask2FormerSWIN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegMask2FormerSWIN.json",
+        "run_hash": "6e231498d8",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 50600,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegMask2FormerSWIN --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegMask2FormerSWIN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegMask2FormerSWIN --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegMask2FormerSWIN_lambda5"
+    },
+    {
+      "name": "SegKNetSWIN.ckpt",
+      "size": 85549249,
+      "sha256": "c2af5a630471347634555a540e353dbd0fcd8635b067bacf742d278df031df9a",
+      "task_model": "SegKNetSWIN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegKNetSWIN.json",
+        "run_hash": "4afbaf90a9",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 50600,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegKNetSWIN --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegKNetSWIN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegKNetSWIN --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegKNetSWIN_lambda5"
+    },
+    {
+      "name": "SegUperNetSWIN.ckpt",
+      "size": 85550404,
+      "sha256": "d8982fa4c6cf48f041a4e0cc87570a951e6f2d97f490e6b7b3fb493a08e7dcda",
+      "task_model": "SegUperNetSWIN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/SegUperNetSWIN.json",
+        "run_hash": "a493872b94",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 50600,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegUperNetSWIN --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegUperNetSWIN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegUperNetSWIN --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegUperNetSWIN_lambda5"
+    },
+    {
+      "name": "DINOSWIN-L.ckpt",
+      "size": 87221184,
+      "sha256": "4b3cb129a21e6b25e79670e4e30e79a16eee08fe23d60d4e16d0cd69268ef0d5",
+      "task_model": "DINOSWIN-L",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/DINOSWIN-L.json",
+        "run_hash": "3ac1855142",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 192,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 75,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 0
+      },
+      "epoch": 74,
+      "global_step": 210750,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DINOSWIN-L --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DINOSWIN-L.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DINOSWIN-L --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 75 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 0 --checkpoint_dir ${CKPT}/DINOSWIN-L_lambda5"
+    },
+    {
+      "name": "DDQDETRSWIN-L.ckpt",
+      "size": 87222339,
+      "sha256": "1e5a17beb176bb413d8c35cf6d903e1fc392750f8e92cd1b791a419befc5d49f",
+      "task_model": "DDQDETRSWIN-L",
+      "lambda_ref": 50.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/DDQDETRSWIN-L.json",
+        "run_hash": "ff8d63fca3",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 192,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 75,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.2,
+        "lr_min_factor": 0.1,
+        "lambda_warmup_epochs": 0
+      },
+      "epoch": 74,
+      "global_step": 495825,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DDQDETRSWIN-L --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DDQDETRSWIN-L.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DDQDETRSWIN-L --data_root ${DATA_COCO} --lambda_ref 50.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 75 --lr_scheduler wsd --lr_decay_frac 0.2 --lr_min_factor 0.1 --lambda_warmup_epochs 0 --checkpoint_dir ${CKPT}/DDQDETRSWIN-L_lambda50"
+    },
+    {
+      "name": "ATSSSWIN-L.ckpt",
+      "size": 87221184,
+      "sha256": "2fec848e271d9ffc53f16157efe968f868d84d3be708736a828062c605b67f1a",
+      "task_model": "ATSSSWIN-L",
+      "lambda_ref": 50.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/ATSSSWIN-L.json",
+        "run_hash": "c9d91e6484",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 192,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 75,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.2,
+        "lr_min_factor": 0.1,
+        "lambda_warmup_epochs": 0
+      },
+      "epoch": 74,
+      "global_step": 491475,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model ATSSSWIN-L --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/ATSSSWIN-L.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model ATSSSWIN-L --data_root ${DATA_COCO} --lambda_ref 50.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 75 --lr_scheduler wsd --lr_decay_frac 0.2 --lr_min_factor 0.1 --lambda_warmup_epochs 0 --checkpoint_dir ${CKPT}/ATSSSWIN-L_lambda50"
+    },
+    {
+      "name": "GroundingDINO.ckpt",
+      "size": 85550019,
+      "sha256": "355a3a9629f086d0602fe494650f2d6458ab28818d4c2c8c91792fa352c43106",
+      "task_model": "GroundingDINO",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/GroundingDINO.json",
+        "run_hash": "f07196114a",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 216100,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model GroundingDINO --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/GroundingDINO.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model GroundingDINO --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/GroundingDINO_lambda5"
+    },
+    {
+      "name": "GLIP.ckpt",
+      "size": 85546490,
+      "sha256": "45af538b0dcc490936e8a3db18826b8de3d6729804f1f96abc1834baffa41562",
+      "task_model": "GLIP",
+      "lambda_ref": 10.0,
+      "lambda_range": [
+        0.01,
+        8.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/GLIP.json",
+        "run_hash": "98777b2bae",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 129,
+      "global_step": 362050,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model GLIP --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/GLIP.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model GLIP --data_root ${DATA_COCO} --lambda_ref 10.0 --lambda_min 0.01 --lambda_max 8.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/GLIP_lambda10"
+    },
+    {
+      "name": "Mask2FormerSWIN.ckpt",
+      "size": 85550789,
+      "sha256": "059dfe8580fd43581b1c4b996d43792913d1c08b1e39a0b50ee28067cf9dca50",
+      "task_model": "Mask2FormerSWIN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/Mask2FormerSWIN.json",
+        "run_hash": "9a4d0ade61",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model Mask2FormerSWIN --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/Mask2FormerSWIN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model Mask2FormerSWIN --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/Mask2FormerSWIN_lambda5"
+    },
+    {
+      "name": "RepPointsV2.ckpt",
+      "size": 85549249,
+      "sha256": "ac93e825a95c60b80a1133ad745f6342e66effa355f216deb76782d6568d5101",
+      "task_model": "RepPointsV2",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/RepPointsV2.json",
+        "run_hash": "972306c588",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 271800,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model RepPointsV2 --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/RepPointsV2.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model RepPointsV2 --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/RepPointsV2_lambda5"
+    },
+    {
+      "name": "ATSSResNet.ckpt",
+      "size": 83873436,
+      "sha256": "86bac1172108db4ba447fd87f42fd679a9c2fb53cdf6adc8b05742efa042862d",
+      "task_model": "ATSSResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/ATSSResNet.json",
+        "run_hash": "6c5188e6b7",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model ATSSResNet --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/ATSSResNet.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model ATSSResNet --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/ATSSResNet_lambda5"
+    },
+    {
+      "name": "RetinaNet.ckpt",
+      "size": 83873057,
+      "sha256": "f3831514f55bbc115bc9c9e77239fcc56781347c7f48ad332fc1cd7d5a8fa8ec",
+      "task_model": "RetinaNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/RetinaNet.json",
+        "run_hash": "16a49ef2fc",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model RetinaNet --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/RetinaNet.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model RetinaNet --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/RetinaNet_lambda5"
+    },
+    {
+      "name": "FasterRCNN.ckpt",
+      "size": 83873436,
+      "sha256": "87c69333a8c57f35f408aca96d5bf519d6ba78b7c20cefeb167c25b181515f82",
+      "task_model": "FasterRCNN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/FasterRCNN.json",
+        "run_hash": "f2d4f8b22b",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model FasterRCNN --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/FasterRCNN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model FasterRCNN --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/FasterRCNN_lambda5"
+    },
+    {
+      "name": "CascadeMaskRCNN.ckpt",
+      "size": 83875331,
+      "sha256": "d4d032325410cf9c8b6c3d1c15b2fc51833cbca1298691587d9bbda8a5ab965c",
+      "task_model": "CascadeMaskRCNN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/CascadeMaskRCNN.json",
+        "run_hash": "643b063c9c",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model CascadeMaskRCNN --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/CascadeMaskRCNN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model CascadeMaskRCNN --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/CascadeMaskRCNN_lambda5"
+    },
+    {
+      "name": "DeformableDETR.ckpt",
+      "size": 83874952,
+      "sha256": "f48efefc4d4c8be2d2377600dd82b4e729c7e2206a0f343db327f718f05b0028",
+      "task_model": "DeformableDETR",
+      "lambda_ref": 30.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/DeformableDETR.json",
+        "run_hash": "b371fa29eb",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 274100,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DeformableDETR --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DeformableDETR.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DeformableDETR --data_root ${DATA_COCO} --lambda_ref 30.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/DeformableDETR_lambda30"
+    },
+    {
+      "name": "DINOResNet.ckpt",
+      "size": 83873436,
+      "sha256": "97b16b220372808bcc328c55250aaa1114727c5a04e4a00169157c9ce60c7221",
+      "task_model": "DINOResNet",
+      "lambda_ref": 30.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/DINOResNet.json",
+        "run_hash": "ab981f325f",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 274100,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DINOResNet --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DINOResNet.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DINOResNet --data_root ${DATA_COCO} --lambda_ref 30.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/DINOResNet_lambda30"
+    },
+    {
+      "name": "Mask2FormerResNet.ckpt",
+      "size": 83878969,
+      "sha256": "c5beaf588da010734d36eb141b9dea252e9370195a0c0e1068b8fe9e74c12953",
+      "task_model": "Mask2FormerResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/Mask2FormerResNet.json",
+        "run_hash": "788e54b6c1",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model Mask2FormerResNet --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/Mask2FormerResNet.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model Mask2FormerResNet --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/Mask2FormerResNet_lambda5"
+    },
+    {
+      "name": "DDQDETRResNet.ckpt",
+      "size": 83874573,
+      "sha256": "6ba931299d7509ccae247d7d8ed66b0cb82f022d9d2e5461e513e5feee54b0b9",
+      "task_model": "DDQDETRResNet",
+      "lambda_ref": 50.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/DDQDETRResNet.json",
+        "run_hash": "2ed6991833",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "rescue",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 281000,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DDQDETRResNet --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DDQDETRResNet.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DDQDETRResNet --data_root ${DATA_COCO} --lambda_ref 50.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/DDQDETRResNet_lambda50"
+    },
+    {
+      "name": "FCOS.ckpt",
+      "size": 83871098,
+      "sha256": "693021e17f306072c4fb7f3196bb986ef9f2a655b454f93accf8dcd6a17d348b",
+      "task_model": "FCOS",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/FCOS.json",
+        "run_hash": "c324749169",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 271800,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model FCOS --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/FCOS.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model FCOS --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/FCOS_lambda5"
+    },
+    {
+      "name": "MaskRCNN.ckpt",
+      "size": 85548094,
+      "sha256": "6ea38f17e80f4fad131d8462e0a8ae95e54d1a2991fdafa625f49196b32074c0",
+      "task_model": "MaskRCNN",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "selected",
+        "results": "results/selected/MaskRCNN.json",
+        "run_hash": "7ea6bf0f75",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model MaskRCNN --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/MaskRCNN.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model MaskRCNN --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/MaskRCNN_lambda5"
+    },
+    {
+      "name": "DINOResNet_lambda5.ckpt",
+      "size": 83879860,
+      "sha256": "1ef89623247066c81c8b7aea114362f0255dcde9db2f6247095789b2b4781cff",
+      "task_model": "DINOResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "replaced",
+        "results": "results/replaced/DINOResNet_lambda5.json",
+        "run_hash": "5f1af6e55a",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 88,
+      "global_step": 243949,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DINOResNet --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DINOResNet_lambda5.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DINOResNet --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/DINOResNet_lambda5"
+    },
+    {
+      "name": "DDQDETRResNet_lambda5.ckpt",
+      "size": 83880997,
+      "sha256": "099928f8654d00f74b3716e49eec96e8b2af3584964674c8fbb9db5a5c81faae",
+      "task_model": "DDQDETRResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "replaced",
+        "results": "results/replaced/DDQDETRResNet_lambda5.json",
+        "run_hash": "4fc36120ca",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 87,
+      "global_step": 247280,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DDQDETRResNet --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DDQDETRResNet_lambda5.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DDQDETRResNet --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/DDQDETRResNet_lambda5"
+    },
+    {
+      "name": "DeformableDETR_lambda5.ckpt",
+      "size": 83881376,
+      "sha256": "9ec676b681e44c832cecb65078a945eac718e0202b2d310e00724bc569b7ed50",
+      "task_model": "DeformableDETR",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "replaced",
+        "results": "results/replaced/DeformableDETR_lambda5.json",
+        "run_hash": "6b8fb2955c",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 89,
+      "global_step": 246690,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model DeformableDETR --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/DeformableDETR_lambda5.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model DeformableDETR --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/DeformableDETR_lambda5"
+    },
+    {
+      "name": "SegUperNetResNet_lambda5.ckpt",
+      "size": 83882134,
+      "sha256": "3489ee44320004dcd6033ab9786d71f9c048fd47cf7ca69deb0deb89923c50c0",
+      "task_model": "SegUperNetResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "replaced",
+        "results": "results/replaced/SegUperNetResNet_lambda5.json",
+        "run_hash": "987e4f0462",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 200,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 199,
+      "global_step": 101200,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegUperNetResNet --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegUperNetResNet_lambda5.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegUperNetResNet --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 200 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegUperNetResNet_lambda5"
+    },
+    {
+      "name": "GLIP_lambda5.ckpt",
+      "size": 85549634,
+      "sha256": "4beac5f838ba7dad4a57935afea5efc54e52accb31aefc93ca83d616b41e3dbb",
+      "task_model": "GLIP",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "replaced",
+        "results": "results/replaced/GLIP_lambda5.json",
+        "run_hash": "e1b5ef39b5",
+        "metric": "mAP",
+        "dataset": "coco"
+      },
+      "codec": {
+        "class": "QVRFELFCForSWIN",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "embed_dims": 96,
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 100,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 99,
+      "global_step": 278500,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model GLIP --data_root ${DATA_COCO} --checkpoint ${WEIGHTS}/GLIP_lambda5.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model GLIP --data_root ${DATA_COCO} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 100 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/GLIP_lambda5"
+    },
+    {
+      "name": "SegMask2FormerResNet_lambda5.ckpt",
+      "size": 83883650,
+      "sha256": "3ebfad7615dd4efc0c30999b1b7dcdc69ab6fd4a00c5ade1c7991abdb2944639",
+      "task_model": "SegMask2FormerResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "replaced",
+        "results": "results/replaced/SegMask2FormerResNet_lambda5.json",
+        "run_hash": "f62e46886f",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 200,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 199,
+      "global_step": 101200,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegMask2FormerResNet --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegMask2FormerResNet_lambda5.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegMask2FormerResNet --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 200 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegMask2FormerResNet_lambda5"
+    },
+    {
+      "name": "SegMaskFormerResNet_lambda5.ckpt",
+      "size": 83883271,
+      "sha256": "13ccd6e4af6f19f89a78c6c4cc107d07c881771d5a3c9aa0c998159deb37f5ec",
+      "task_model": "SegMaskFormerResNet",
+      "lambda_ref": 5.0,
+      "lambda_range": [
+        0.01,
+        2.0
+      ],
+      "reproduces": {
+        "kind": "replaced",
+        "results": "results/replaced/SegMaskFormerResNet_lambda5.json",
+        "run_hash": "db3c9f3ae4",
+        "metric": "mIoU",
+        "dataset": "ade"
+      },
+      "codec": {
+        "class": "QVRFELFC",
+        "codec_family": "elfc",
+        "var_rate": "gqvrf",
+        "cut_point": 1,
+        "args": {
+          "analysis_strides": [
+            1,
+            2,
+            2
+          ],
+          "synthesis_strides": [
+            1,
+            2,
+            2
+          ],
+          "M": 120,
+          "N": 192,
+          "feature_chs": 256,
+          "groups": [
+            6,
+            6,
+            12,
+            24,
+            72
+          ],
+          "scale_per_group": true
+        }
+      },
+      "recipe": {
+        "name": "basic",
+        "epochs": 200,
+        "lr_scheduler": "wsd",
+        "lr_decay_frac": 0.3,
+        "lr_min_factor": 0.05,
+        "lambda_warmup_epochs": 5
+      },
+      "epoch": 199,
+      "global_step": 101200,
+      "lightning_version": "2.6.1",
+      "test_command": "python -m cfwm_repro.tools.test_rate_guided --task_model SegMaskFormerResNet --data_root ${DATA_ADE} --checkpoint ${WEIGHTS}/SegMaskFormerResNet_lambda5.ckpt --results_dir results/mine --max_points 14 --min_points 8 --floor_frac 0.6 --plateau_tol 0.015 --q_step 0.03 --rate_stall 0.1 --hi_frac 0.85",
+      "train_command": "python -m cfwm_repro.tools.train_variable_rate --task_model SegMaskFormerResNet --data_root ${DATA_ADE} --lambda_ref 5.0 --lambda_min 0.01 --lambda_max 2.0 --epochs 200 --lr_scheduler wsd --lr_decay_frac 0.3 --lr_min_factor 0.05 --lambda_warmup_epochs 5 --checkpoint_dir ${CKPT}/SegMaskFormerResNet_lambda5"
+    }
+  ],
+  "splits": [
+    {
+      "name": "coco2017_split_anns.tar.gz",
+      "size": 155713595,
+      "sha256": "23f24420c9b8e24ecde02b159551e0cc0c9cb7161c4e987bbbda5f24730dc523",
+      "members": [
+        {
+          "name": "coco2017_trn_split_anns.json",
+          "size": 502270473,
+          "sha256": "a42563450c52c684f985afeb17d9b654fd3ed1b623e01269e8b9072147482574"
+        },
+        {
+          "name": "coco2017_val_split_anns.json",
+          "size": 27109409,
+          "sha256": "a2459060dc5ac32d15c7dc1644c531ed8ab46a47d714519dc1f104fe4afb42b3"
+        },
+        {
+          "name": "coco2017_split_anns_NOTICE.txt",
+          "size": 984,
+          "sha256": "b367a301d94dc316bd4734d56c9f6c453ffc306c13ed6773ad4e3d7b5a97d762"
+        }
+      ]
+    }
+  ]
+}

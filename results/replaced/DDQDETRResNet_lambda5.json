@@ -1,0 +1,36 @@
+{
+  "task_model": "DDQDETRResNet",
+  "display_name": "DDQDETRResNet",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.521,
+  "rd_points": [
+    {
+      "lambda": 2.5,
+      "bpp": 0.007957224734127522,
+      "value": 0.009,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.008528288453817368,
+      "value": 0.011,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.010065487585961819,
+      "value": 0.014,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "4fc36120ca",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

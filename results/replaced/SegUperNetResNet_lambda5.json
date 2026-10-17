@@ -1,0 +1,36 @@
+{
+  "task_model": "SegUperNetResNet",
+  "display_name": "SegUperNetResNet",
+  "lambda_ref": 5.0,
+  "metric": "mIoU",
+  "baseline": 42.04999923706055,
+  "rd_points": [
+    {
+      "lambda": 5.0,
+      "bpp": 0.0068181282840669155,
+      "value": 0.23000000417232513,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.0068181282840669155,
+      "value": 0.23000000417232513,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.0068181282840669155,
+      "value": 0.23000000417232513,
+      "metric": "mIoU"
+    }
+  ],
+  "run_hash": "987e4f0462",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

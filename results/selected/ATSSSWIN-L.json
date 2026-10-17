@@ -1,0 +1,102 @@
+{
+  "task_model": "ATSSSWIN-L",
+  "display_name": "ATSSSWIN-L",
+  "lambda_ref": 50.0,
+  "metric": "mAP",
+  "baseline": 0.562,
+  "rd_points": [
+    {
+      "lambda": 0.09765625,
+      "bpp": 0.0767839327454567,
+      "value": 0.29,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.1953125,
+      "bpp": 0.08650795370340347,
+      "value": 0.345,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.390625,
+      "bpp": 0.10650879144668579,
+      "value": 0.407,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.78125,
+      "bpp": 0.14713990688323975,
+      "value": 0.467,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.9290680289268494,
+      "bpp": 0.16213713586330414,
+      "value": 0.479,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.1048543453216553,
+      "bpp": 0.17949537932872772,
+      "value": 0.491,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.5625,
+      "bpp": 0.22191362082958221,
+      "value": 0.508,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 2.2097086906433105,
+      "bpp": 0.2757476270198822,
+      "value": 0.524,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 3.125,
+      "bpp": 0.3419105112552643,
+      "value": 0.534,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 6.25,
+      "bpp": 0.5128301382064819,
+      "value": 0.547,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 12.5,
+      "bpp": 0.7329472899436951,
+      "value": 0.553,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 25.0,
+      "bpp": 0.9978353381156921,
+      "value": 0.556,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 50.0,
+      "bpp": 1.3060964345932007,
+      "value": 0.558,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 100.0,
+      "bpp": 1.6640630960464478,
+      "value": 0.558,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "c9d91e6484",
+  "train_params": {
+    "lambda_ref": "50.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "task_model": "GLIP",
+  "display_name": "GLIP",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.533,
+  "rd_points": [
+    {
+      "lambda": 0.625,
+      "bpp": 0.025276577100157738,
+      "value": 0.207,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.04020598903298378,
+      "value": 0.339,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.06396070867776871,
+      "value": 0.419,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 3.535533905029297,
+      "bpp": 0.07915059477090836,
+      "value": 0.447,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 4.204482078552246,
+      "bpp": 0.08756735920906067,
+      "value": 0.454,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.09652063250541687,
+      "value": 0.463,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 7.071067810058594,
+      "bpp": 0.11617585271596909,
+      "value": 0.475,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.13853579759597778,
+      "value": 0.483,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 14.142135620117188,
+      "bpp": 0.16549451649188995,
+      "value": 0.486,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 20.0,
+      "bpp": 0.2014167308807373,
+      "value": 0.489,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 40.0,
+      "bpp": 0.35000306367874146,
+      "value": 0.496,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "e1b5ef39b5",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

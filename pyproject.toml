@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfwm-repro"
+version = "0.1.0"
+description = "Feature codec and training / testing code that reproduce the paper Compression for which Machine, on the CFM-Model-Zoo split-model library."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Alon Harell" }]
+license = { file = "LICENSE" }
+dependencies = [
+    # The split-model library, pinned to one commit for exact reproduction. Change the pin by hand.
+    "cfm-model-zoo[detection,segmentation] @ git+https://github.com/picagrad/CFM-Model-Zoo@a430c1ecd9be5601f64a33f78b783422814785bd",
+    # The codec's entropy coder and layers; results were produced with exactly this version.
+    "compressai==1.2.8",
+    "torch>=2.6",
+    "numpy",
+    "pytorch-lightning==2.6.1",
+    "mmengine>=0.10.7,<0.11",
+    # the paper's figures and tables (cfwm_repro.results)
+    "scipy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+mlflow = ["mlflow-skinny>=2.22,<3"]
+
+[tool.setuptools]
+packages = ["cfwm_repro", "cfwm_repro.codecs", "cfwm_repro.tools", "cfwm_repro.results"]
+license-files = ["LICENSE", "NOTICE", "third_party_licenses/*"]

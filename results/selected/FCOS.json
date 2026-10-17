@@ -1,0 +1,102 @@
+{
+  "task_model": "FCOS",
+  "display_name": "FCOS",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.423,
+  "rd_points": [
+    {
+      "lambda": 0.0390625,
+      "bpp": 0.049261465668678284,
+      "value": 0.253,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.078125,
+      "bpp": 0.06915285438299179,
+      "value": 0.313,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.11048543453216553,
+      "bpp": 0.08496882021427155,
+      "value": 0.341,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.1313900649547577,
+      "bpp": 0.09474008530378342,
+      "value": 0.35,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.15625,
+      "bpp": 0.10589064657688141,
+      "value": 0.361,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.22097086906433105,
+      "bpp": 0.1327376812696457,
+      "value": 0.376,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.3125,
+      "bpp": 0.16635648906230927,
+      "value": 0.39,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.4419417381286621,
+      "bpp": 0.2078220695257187,
+      "value": 0.4,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.625,
+      "bpp": 0.258315771818161,
+      "value": 0.407,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.8838834762573242,
+      "bpp": 0.31884878873825073,
+      "value": 0.412,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.3899805247783661,
+      "value": 0.415,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.5650573968887329,
+      "value": 0.419,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.784722089767456,
+      "value": 0.422,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 1.0507583618164062,
+      "value": 0.422,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "c324749169",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

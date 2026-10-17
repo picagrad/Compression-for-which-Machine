@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, and cite the papers listed in ATTRIBUTION.md for the codec and the task models you use."
+title: "Compression-for-which-Machine: feature codec and reproduction code"
+type: software
+authors:
+  - family-names: "Harell"
+    given-names: "Alon"
+version: 0.1.0
+repository-code: "https://github.com/picagrad/Compression-for-which-Machine"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23408855"
+    description: "The published codec weights (Zenodo)"

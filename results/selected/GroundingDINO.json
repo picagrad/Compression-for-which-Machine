@@ -1,0 +1,102 @@
+{
+  "task_model": "GroundingDINO",
+  "display_name": "GroundingDINO",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.581,
+  "rd_points": [
+    {
+      "lambda": 0.078125,
+      "bpp": 0.041835982352495193,
+      "value": 0.324,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.15625,
+      "bpp": 0.058503374457359314,
+      "value": 0.411,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.3125,
+      "bpp": 0.08663323521614075,
+      "value": 0.479,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.37162721157073975,
+      "bpp": 0.09589194506406784,
+      "value": 0.491,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.4419417381286621,
+      "bpp": 0.10611673444509506,
+      "value": 0.5,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.5255602598190308,
+      "bpp": 0.1173388808965683,
+      "value": 0.512,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.625,
+      "bpp": 0.1296570599079132,
+      "value": 0.52,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.8838834762573242,
+      "bpp": 0.15780575573444366,
+      "value": 0.535,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.19090081751346588,
+      "value": 0.544,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.7677669525146484,
+      "bpp": 0.2289736121892929,
+      "value": 0.552,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.2722700536251068,
+      "value": 0.557,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.37679779529571533,
+      "value": 0.564,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.5111717581748962,
+      "value": 0.566,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 20.0,
+      "bpp": 0.6742253303527832,
+      "value": 0.568,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "f07196114a",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

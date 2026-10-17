@@ -1,0 +1,36 @@
+{
+  "task_model": "DINOResNet",
+  "display_name": "DINOResNet",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.501,
+  "rd_points": [
+    {
+      "lambda": 2.5,
+      "bpp": 0.0042078811675310135,
+      "value": 0.0,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.004370099864900112,
+      "value": 0.0,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.005975198466330767,
+      "value": 0.001,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "5f1af6e55a",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

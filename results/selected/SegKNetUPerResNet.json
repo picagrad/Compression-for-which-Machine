@@ -1,0 +1,102 @@
+{
+  "task_model": "SegKNetUPerResNet",
+  "display_name": "SegKNetUPerResNet",
+  "lambda_ref": 5.0,
+  "metric": "mIoU",
+  "baseline": 43.400001525878906,
+  "rd_points": [
+    {
+      "lambda": 0.078125,
+      "bpp": 0.027503546327352524,
+      "value": 23.649999618530273,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.15625,
+      "bpp": 0.045690421015024185,
+      "value": 34.220001220703125,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.22097086906433105,
+      "bpp": 0.059719230979681015,
+      "value": 36.849998474121094,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.2409704476594925,
+      "bpp": 0.06382464617490768,
+      "value": 37.66999816894531,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.2627801299095154,
+      "bpp": 0.06821542978286743,
+      "value": 38.38999938964844,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.3125,
+      "bpp": 0.07778162509202957,
+      "value": 39.36000061035156,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.4419417381286621,
+      "bpp": 0.10058954358100891,
+      "value": 40.70000076293945,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.625,
+      "bpp": 0.12863783538341522,
+      "value": 42.0,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.8838834762573242,
+      "bpp": 0.16224458813667297,
+      "value": 41.849998474121094,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.20150211453437805,
+      "value": 42.540000915527344,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 1.7677669525146484,
+      "bpp": 0.24616572260856628,
+      "value": 42.779998779296875,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.29588690400123596,
+      "value": 43.09000015258789,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.40874743461608887,
+      "value": 43.09000015258789,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.5395624041557312,
+      "value": 43.18000030517578,
+      "metric": "mIoU"
+    }
+  ],
+  "run_hash": "e1d87272c2",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

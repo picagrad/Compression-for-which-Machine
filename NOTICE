@@ -1,0 +1,45 @@
+Compression-for-which-Machine
+Copyright 2026 Alon Harell
+
+Compression-for-which-Machine is for academic use only: see LICENSE. Third-party
+components keep their own licences; the text of the one that is redistributed here is in
+third_party_licenses/.
+
+CompressAI
+
+The codec builds on CompressAI (https://github.com/InterDigitalInc/CompressAI), Copyright
+(c) 2021-2024 InterDigital Communications, Inc., licensed under the BSD 3-Clause Clear
+License: see third_party_licenses/CompressAI-LICENSE.txt.
+
+- The codec classes subclass compressai.models.Elic2022Official and use CompressAI's
+  entropy models and layers (compressai==1.2.8 is installed as a dependency, not copied).
+- cfwm_repro/codecs/utils.py: the checkerboard and Gaussian-conditional functions are
+  modified copies of CompressAI methods.
+
+Methods the codec follows
+
+- ELIC (He et al., CVPR 2022): the codec's architecture. ELFC is ELIC adapted to feature maps.
+- QVRF (Tong et al., ICIP 2023): the codec's variable-rate scheme.
+
+The papers are cited in README.md, "Attribution".
+
+OpenMMLab
+
+Task models come from OpenMMLab (https://github.com/open-mmlab), licensed under the
+Apache License, Version 2.0, through the CFM-Model-Zoo library. cfwm_repro uses
+MMDetection's PatchEmbed layer; MMDetection and MMSegmentation are installed as
+dependencies of the library and are not copied into this repository.
+
+CFM-Model-Zoo
+
+The split task models, their configurations, weights handling and third-party notices are
+those of the CFM-Model-Zoo library (https://github.com/picagrad/CFM-Model-Zoo): see its
+NOTICE and README. This repository distributes no task-model weights; they are
+downloaded from their publishers and remain under the publishers' terms.
+
+Codec weights
+
+The trained codec weights are not part of this repository and will be published
+separately.
+
+See README.md, "Attribution", for the papers to cite.

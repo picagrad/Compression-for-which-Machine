@@ -1,0 +1,96 @@
+{
+  "task_model": "DeformableDETR",
+  "display_name": "DeformableDETR",
+  "lambda_ref": 30.0,
+  "metric": "mAP",
+  "baseline": 0.47,
+  "rd_points": [
+    {
+      "lambda": 0.9375,
+      "bpp": 0.026941007003188133,
+      "value": 0.185,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.875,
+      "bpp": 0.04362649470567703,
+      "value": 0.309,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 3.75,
+      "bpp": 0.07442142814397812,
+      "value": 0.391,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 4.459526538848877,
+      "bpp": 0.08448085933923721,
+      "value": 0.403,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.303300857543945,
+      "bpp": 0.09551353007555008,
+      "value": 0.413,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 6.306723117828369,
+      "bpp": 0.10761318355798721,
+      "value": 0.423,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 7.5,
+      "bpp": 0.12078063935041428,
+      "value": 0.432,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.60660171508789,
+      "bpp": 0.15049831569194794,
+      "value": 0.442,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 15.0,
+      "bpp": 0.1850261092185974,
+      "value": 0.45,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 21.21320343017578,
+      "bpp": 0.22461217641830444,
+      "value": 0.454,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 30.0,
+      "bpp": 0.2699028253555298,
+      "value": 0.457,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 60.0,
+      "bpp": 0.37936165928840637,
+      "value": 0.462,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 120.0,
+      "bpp": 0.5246586203575134,
+      "value": 0.464,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "b371fa29eb",
+  "train_params": {
+    "lambda_ref": "30.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

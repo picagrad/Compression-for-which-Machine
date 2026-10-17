@@ -1,0 +1,234 @@
+{
+  "trained_on_task_model": "SegUperNetResNet",
+  "source_run_hash": "a3dc3a1ac2",
+  "results": [
+    {
+      "tested_on_task_model": "SegFCNResNet",
+      "lambda_ref": 50.0,
+      "sweep": "rate_guided",
+      "metric": "mIoU",
+      "baseline": 36.11000061035156,
+      "rd_points": [
+        {
+          "lambda": 12.5,
+          "bpp": 0.0181889571249485,
+          "value": 9.729999542236328,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 25.0,
+          "bpp": 0.03399406746029854,
+          "value": 21.899999618530273,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 50.0,
+          "bpp": 0.060297850519418716,
+          "value": 29.68000030517578,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 59.46035385131836,
+          "bpp": 0.0687503069639206,
+          "value": 30.65999984741211,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 70.71067810058594,
+          "bpp": 0.07798402011394501,
+          "value": 31.549999237060547,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 84.08963775634766,
+          "bpp": 0.08797412365674973,
+          "value": 32.439998626708984,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 100.0,
+          "bpp": 0.09882117807865143,
+          "value": 32.900001525878906,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 141.42135620117188,
+          "bpp": 0.12294676154851913,
+          "value": 33.7400016784668,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 200.0,
+          "bpp": 0.15011411905288696,
+          "value": 34.2599983215332,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 282.84271240234375,
+          "bpp": 0.18015888333320618,
+          "value": 34.56999969482422,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 400.0,
+          "bpp": 0.21295224130153656,
+          "value": 34.68000030517578,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 800.0,
+          "bpp": 0.28867772221565247,
+          "value": 34.84000015258789,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 1600.0,
+          "bpp": 0.4024886190891266,
+          "value": 34.88999938964844,
+          "metric": "mIoU"
+        }
+      ]
+    },
+    {
+      "tested_on_task_model": "SegKNetUPerResNet",
+      "lambda_ref": 50.0,
+      "sweep": "rate_guided",
+      "metric": "mIoU",
+      "baseline": 43.400001525878906,
+      "rd_points": [
+        {
+          "lambda": 25.0,
+          "bpp": 0.031823739409446716,
+          "value": 23.959999084472656,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 50.0,
+          "bpp": 0.057035621255636215,
+          "value": 34.459999084472656,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 70.71067810058594,
+          "bpp": 0.07407543063163757,
+          "value": 36.40999984741211,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 84.08963775634766,
+          "bpp": 0.08375236392021179,
+          "value": 37.779998779296875,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 100.0,
+          "bpp": 0.09426934272050858,
+          "value": 38.7599983215332,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 118.92070770263672,
+          "bpp": 0.1055922657251358,
+          "value": 39.709999084472656,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 141.42135620117188,
+          "bpp": 0.11777772754430771,
+          "value": 40.220001220703125,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 200.0,
+          "bpp": 0.14441819489002228,
+          "value": 40.720001220703125,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 400.0,
+          "bpp": 0.20648571848869324,
+          "value": 40.720001220703125,
+          "metric": "mIoU"
+        }
+      ]
+    },
+    {
+      "tested_on_task_model": "SegMask2FormerResNet",
+      "lambda_ref": 50.0,
+      "sweep": "rate_guided",
+      "metric": "mIoU",
+      "baseline": 47.880001068115234,
+      "rd_points": [
+        {
+          "lambda": 6.25,
+          "bpp": 0.012895454652607441,
+          "value": 0.14000000059604645,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 12.5,
+          "bpp": 0.013014662079513073,
+          "value": 0.14000000059604645,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 25.0,
+          "bpp": 0.015713119879364967,
+          "value": 0.14000000059604645,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 50.0,
+          "bpp": 0.028243599459528923,
+          "value": 0.14000000059604645,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 100.0,
+          "bpp": 0.048868514597415924,
+          "value": 0.14000000059604645,
+          "metric": "mIoU"
+        }
+      ]
+    },
+    {
+      "tested_on_task_model": "SegMaskFormerResNet",
+      "lambda_ref": 50.0,
+      "sweep": "rate_guided",
+      "metric": "mIoU",
+      "baseline": 44.279998779296875,
+      "rd_points": [
+        {
+          "lambda": 6.25,
+          "bpp": 0.013223875313997269,
+          "value": 0.05999999865889549,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 12.5,
+          "bpp": 0.01327585056424141,
+          "value": 0.05999999865889549,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 25.0,
+          "bpp": 0.015023546293377876,
+          "value": 0.05999999865889549,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 50.0,
+          "bpp": 0.025995999574661255,
+          "value": 0.05999999865889549,
+          "metric": "mIoU"
+        },
+        {
+          "lambda": 100.0,
+          "bpp": 0.04638032615184784,
+          "value": 0.05999999865889549,
+          "metric": "mIoU"
+        }
+      ]
+    }
+  ]
+}

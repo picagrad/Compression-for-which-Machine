@@ -1,0 +1,96 @@
+{
+  "task_model": "SegUperNetResNet",
+  "display_name": "SegUperNetResNet",
+  "lambda_ref": 50.0,
+  "metric": "mIoU",
+  "baseline": 42.04999923706055,
+  "rd_points": [
+    {
+      "lambda": 12.5,
+      "bpp": 0.019115790724754333,
+      "value": 15.920000076293945,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 25.0,
+      "bpp": 0.03570929169654846,
+      "value": 30.6299991607666,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 35.35533905029297,
+      "bpp": 0.04788615554571152,
+      "value": 34.79999923706055,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 42.04481887817383,
+      "bpp": 0.055049218237400055,
+      "value": 36.09000015258789,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 45.85020065307617,
+      "bpp": 0.058908604085445404,
+      "value": 37.20000076293945,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 50.0,
+      "bpp": 0.06293037533760071,
+      "value": 37.54999923706055,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 59.46035385131836,
+      "bpp": 0.07165857404470444,
+      "value": 38.880001068115234,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 70.71067810058594,
+      "bpp": 0.08107379823923111,
+      "value": 39.40999984741211,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 84.08963775634766,
+      "bpp": 0.09137598425149918,
+      "value": 40.150001525878906,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 100.0,
+      "bpp": 0.10243985056877136,
+      "value": 40.689998626708984,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 141.42135620117188,
+      "bpp": 0.1270684152841568,
+      "value": 40.880001068115234,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 200.0,
+      "bpp": 0.15469048917293549,
+      "value": 40.9900016784668,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 400.0,
+      "bpp": 0.2181142270565033,
+      "value": 41.400001525878906,
+      "metric": "mIoU"
+    }
+  ],
+  "run_hash": "a3dc3a1ac2",
+  "train_params": {
+    "lambda_ref": "50.0",
+    "lambda_min": "0.01",
+    "lambda_max": "10.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

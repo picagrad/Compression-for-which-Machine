@@ -1,0 +1,96 @@
+{
+  "task_model": "Mask2FormerSWIN",
+  "display_name": "Mask2FormerSWIN",
+  "lambda_ref": 5.0,
+  "metric": "mAP",
+  "baseline": 0.477,
+  "rd_points": [
+    {
+      "lambda": 0.078125,
+      "bpp": 0.04875212535262108,
+      "value": 0.272,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.15625,
+      "bpp": 0.07342459261417389,
+      "value": 0.348,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.3125,
+      "bpp": 0.1147245392203331,
+      "value": 0.402,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.37162721157073975,
+      "bpp": 0.12810102105140686,
+      "value": 0.409,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.4419417381286621,
+      "bpp": 0.14256523549556732,
+      "value": 0.417,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.5255602598190308,
+      "bpp": 0.15862520039081573,
+      "value": 0.427,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.625,
+      "bpp": 0.1763443946838379,
+      "value": 0.433,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 0.8838834762573242,
+      "bpp": 0.21650072932243347,
+      "value": 0.444,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.26430606842041016,
+      "value": 0.451,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 1.7677669525146484,
+      "bpp": 0.3196762800216675,
+      "value": 0.458,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.38325467705726624,
+      "value": 0.461,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.5369110107421875,
+      "value": 0.466,
+      "metric": "mAP"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.7170940041542053,
+      "value": 0.468,
+      "metric": "mAP"
+    }
+  ],
+  "run_hash": "9a4d0ade61",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

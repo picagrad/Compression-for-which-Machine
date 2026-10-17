@@ -1,0 +1,90 @@
+{
+  "task_model": "SegMask2FormerResNet",
+  "display_name": "SegMask2FormerResNet (lambda_ref=5.0)",
+  "lambda_ref": 5.0,
+  "metric": "mIoU",
+  "baseline": 47.880001068115234,
+  "rd_points": [
+    {
+      "lambda": 0.625,
+      "bpp": 0.02461835741996765,
+      "value": 27.889999389648438,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.04371092468500137,
+      "value": 38.16999816894531,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 1.486508846282959,
+      "bpp": 0.049648161977529526,
+      "value": 39.040000915527344,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 1.621049404144287,
+      "bpp": 0.05277523398399353,
+      "value": 41.2400016784668,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 1.7677669525146484,
+      "bpp": 0.056021809577941895,
+      "value": 40.77000045776367,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 2.102241039276123,
+      "bpp": 0.06276342272758484,
+      "value": 42.16999816894531,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.06994741410017014,
+      "value": 43.18000030517578,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 3.535533905029297,
+      "bpp": 0.0854984000325203,
+      "value": 44.209999084472656,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.10233788937330246,
+      "value": 43.59000015258789,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.13927829265594482,
+      "value": 44.189998626708984,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 20.0,
+      "bpp": 0.18962354958057404,
+      "value": 45.45000076293945,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 40.0,
+      "bpp": 0.30998894572257996,
+      "value": 45.130001068115234,
+      "metric": "mIoU"
+    }
+  ],
+  "run_hash": "f62e46886f",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}

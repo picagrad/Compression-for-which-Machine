@@ -1,0 +1,290 @@
+[
+  {
+    "model": "DINOSWIN-L",
+    "display_name": "DINOSWIN-L",
+    "lambda_ref": 5.0,
+    "metric": "mAP",
+    "baseline": 0.583,
+    "rd_points": [
+      {
+        "lambda": 0.078125,
+        "bpp": 0.04030517861247063,
+        "value": 0.338,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.15625,
+        "bpp": 0.05723246932029724,
+        "value": 0.411,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.3125,
+        "bpp": 0.08562352508306503,
+        "value": 0.47,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.4419417381286621,
+        "bpp": 0.10429340600967407,
+        "value": 0.491,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.625,
+        "bpp": 0.12585681676864624,
+        "value": 0.506,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.8838834762573242,
+        "bpp": 0.15047359466552734,
+        "value": 0.518,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 1.25,
+        "bpp": 0.1780855804681778,
+        "value": 0.528,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 2.5,
+        "bpp": 0.2417348325252533,
+        "value": 0.541,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 5.0,
+        "bpp": 0.31718987226486206,
+        "value": 0.548,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 10.0,
+        "bpp": 0.40719231963157654,
+        "value": 0.551,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 20.0,
+        "bpp": 0.5229952931404114,
+        "value": 0.553,
+        "metric": "mAP"
+      }
+    ],
+    "run_hash": "3ac1855142",
+    "train_params": {
+      "lambda_ref": "5.0",
+      "lambda_min": "0.01",
+      "lambda_max": "2.0",
+      "lr_scheduler": "wsd",
+      "codec_family": "elfc",
+      "var_rate": "gqvrf"
+    }
+  },
+  {
+    "model": "DDQDETRSWIN-L",
+    "display_name": "DDQDETRSWIN-L",
+    "lambda_ref": 50.0,
+    "metric": "mAP",
+    "baseline": 0.587,
+    "rd_points": [
+      {
+        "lambda": 0.01220703125,
+        "bpp": 0.06493791192770004,
+        "value": 0.335,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.0244140625,
+        "bpp": 0.06994211673736572,
+        "value": 0.356,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.048828125,
+        "bpp": 0.07781103253364563,
+        "value": 0.388,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.09765625,
+        "bpp": 0.09039688110351562,
+        "value": 0.423,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.1953125,
+        "bpp": 0.11079546064138412,
+        "value": 0.463,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.390625,
+        "bpp": 0.14388540387153625,
+        "value": 0.502,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.78125,
+        "bpp": 0.1968669295310974,
+        "value": 0.53,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 1.5625,
+        "bpp": 0.2771056592464447,
+        "value": 0.55,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 3.125,
+        "bpp": 0.3906225562095642,
+        "value": 0.563,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 6.25,
+        "bpp": 0.5426380634307861,
+        "value": 0.571,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 12.5,
+        "bpp": 0.7320578694343567,
+        "value": 0.575,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 25.0,
+        "bpp": 0.9520571231842041,
+        "value": 0.577,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 50.0,
+        "bpp": 1.1989749670028687,
+        "value": 0.579,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 100.0,
+        "bpp": 1.4837840795516968,
+        "value": 0.579,
+        "metric": "mAP"
+      }
+    ],
+    "run_hash": "ff8d63fca3",
+    "train_params": {
+      "lambda_ref": "50.0",
+      "lambda_min": "0.01",
+      "lambda_max": "2.0",
+      "lr_scheduler": "wsd",
+      "codec_family": "elfc",
+      "var_rate": "gqvrf"
+    }
+  },
+  {
+    "model": "ATSSSWIN-L",
+    "display_name": "ATSSSWIN-L",
+    "lambda_ref": 50.0,
+    "metric": "mAP",
+    "baseline": 0.562,
+    "rd_points": [
+      {
+        "lambda": 0.09765625,
+        "bpp": 0.0767839327454567,
+        "value": 0.29,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.1953125,
+        "bpp": 0.08650795370340347,
+        "value": 0.345,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.390625,
+        "bpp": 0.10650879144668579,
+        "value": 0.407,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.78125,
+        "bpp": 0.14713990688323975,
+        "value": 0.467,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 0.9290680289268494,
+        "bpp": 0.16213713586330414,
+        "value": 0.479,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 1.1048543453216553,
+        "bpp": 0.17949537932872772,
+        "value": 0.491,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 1.5625,
+        "bpp": 0.22191362082958221,
+        "value": 0.508,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 2.2097086906433105,
+        "bpp": 0.2757476270198822,
+        "value": 0.524,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 3.125,
+        "bpp": 0.3419105112552643,
+        "value": 0.534,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 6.25,
+        "bpp": 0.5128301382064819,
+        "value": 0.547,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 12.5,
+        "bpp": 0.7329472899436951,
+        "value": 0.553,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 25.0,
+        "bpp": 0.9978353381156921,
+        "value": 0.556,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 50.0,
+        "bpp": 1.3060964345932007,
+        "value": 0.558,
+        "metric": "mAP"
+      },
+      {
+        "lambda": 100.0,
+        "bpp": 1.6640630960464478,
+        "value": 0.558,
+        "metric": "mAP"
+      }
+    ],
+    "run_hash": "c9d91e6484",
+    "train_params": {
+      "lambda_ref": "50.0",
+      "lambda_min": "0.01",
+      "lambda_max": "2.0",
+      "lr_scheduler": "wsd",
+      "codec_family": "elfc",
+      "var_rate": "gqvrf"
+    }
+  }
+]

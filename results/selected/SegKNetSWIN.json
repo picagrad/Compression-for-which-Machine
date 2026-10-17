@@ -1,0 +1,78 @@
+{
+  "task_model": "SegKNetSWIN",
+  "display_name": "SegKNetSWIN",
+  "lambda_ref": 5.0,
+  "metric": "mIoU",
+  "baseline": 45.86000061035156,
+  "rd_points": [
+    {
+      "lambda": 0.15625,
+      "bpp": 0.028645465150475502,
+      "value": 25.90999984741211,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.3125,
+      "bpp": 0.042884569615125656,
+      "value": 33.81999969482422,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.625,
+      "bpp": 0.06445427983999252,
+      "value": 38.08000183105469,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.7432544231414795,
+      "bpp": 0.07102885842323303,
+      "value": 38.70000076293945,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 0.8838834762573242,
+      "bpp": 0.07803697139024734,
+      "value": 39.790000915527344,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 1.25,
+      "bpp": 0.09343230724334717,
+      "value": 40.59000015258789,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 2.5,
+      "bpp": 0.12898613512516022,
+      "value": 41.5099983215332,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 5.0,
+      "bpp": 0.17008312046527863,
+      "value": 42.68000030517578,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 10.0,
+      "bpp": 0.2183249145746231,
+      "value": 42.709999084472656,
+      "metric": "mIoU"
+    },
+    {
+      "lambda": 20.0,
+      "bpp": 0.28547564148902893,
+      "value": 42.79999923706055,
+      "metric": "mIoU"
+    }
+  ],
+  "run_hash": "4afbaf90a9",
+  "train_params": {
+    "lambda_ref": "5.0",
+    "lambda_min": "0.01",
+    "lambda_max": "2.0",
+    "lr_scheduler": "wsd",
+    "codec_family": "elfc",
+    "var_rate": "gqvrf"
+  }
+}
