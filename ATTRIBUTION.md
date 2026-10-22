@@ -115,7 +115,7 @@ This repository builds on the CFM-Model-Zoo library and on OpenMMLab for the tas
   title = {{CFM-Model-Zoo}: a library of split vision models for compression for machines},
   author = {Harell, Alon},
   url = {https://github.com/picagrad/CFM-Model-Zoo},
-  version = {0.1.0},
+  version = {0.1.1},
   year = {2026}
 }
 

@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Harell"
     given-names: "Alon"
-version: 0.1.0
+version: 0.1.1
 repository-code: "https://github.com/picagrad/Compression-for-which-Machine"
 identifiers:
   - type: doi

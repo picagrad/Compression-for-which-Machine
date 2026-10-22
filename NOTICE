@@ -43,3 +43,12 @@ The trained codec weights are not part of this repository and will be published
 separately.
 
 See README.md, "Attribution", for the papers to cite.
+
+Container image
+
+The container image built from docker/Dockerfile (ghcr.io/picagrad/cfwm-repro) is based
+on NVIDIA's CUDA base image (nvidia/cuda), through the CFM-Model-Zoo image, and contains
+NVIDIA software, under the NVIDIA Deep Learning Container License (in the image at
+/NGC-DL-CONTAINER-LICENSE; https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license)
+and the CUDA EULA (https://docs.nvidia.com/cuda/eula/index.html). This software contains
+source code provided by NVIDIA Corporation.

@@ -6,4 +6,4 @@ The split task models come from the CFM-Model-Zoo library (``cfm_model_zoo``).
 # before any mmdet/mmseg module is imported (codecs/codecs.py imports mmdet's PatchEmbed).
 import cfm_model_zoo  # noqa: F401
 
-__version__ = '0.1.0'   # equal to pyproject.toml's version; the tag every MLflow run of this repo carries
+__version__ = '0.1.1'   # equal to pyproject.toml's version; the tag every MLflow run of this repo carries

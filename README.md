@@ -10,17 +10,43 @@ Authors: Alon Harell. Code: <https://github.com/picagrad/Compression-for-which-M
 
 ## Install
 
-A CUDA GPU is required: training and testing run on `cuda:0`, in 32-bit precision.
+You need a CUDA GPU: training and testing run on `cuda:0`, in 32-bit precision.
 
-1. Install [CFM-Model-Zoo](https://github.com/picagrad/CFM-Model-Zoo#install) as its README describes. The versions
-   it installs (Python 3.12, PyTorch 2.6.0, MMCV 2.1.0, MMDetection 3.3.0, MMSegmentation 1.2.2) are exactly the
-   ones the published results were produced with.
-2. Install this package, from a clone of this repository:
+This repository always uses the exact package versions our results were produced with. You can get them from our
+container image, or install them yourself.
+
+### The container image
+
+The image `ghcr.io/picagrad/cfwm-repro:0.1.1-cu124` holds this repository, CFM-Model-Zoo and every dependency, at
+those versions. The repository is at `/opt/Compression-for-which-Machine`, where every command in this README runs as
+written. Mount your data, the published weights and a folder for the results:
+
+```bash
+# A shell in the repository; in the commands below, use --data_root /data and --checkpoint /weights/<name>.ckpt
+docker run -it --rm --gpus all -v $DATA:/data -v $WEIGHTS:/weights -v $RESULTS:/results \
+    -v ~/.cache/mim:/root/.cache/mim ghcr.io/picagrad/cfwm-repro:0.1.1-cu124 bash
+
+# A Python session
+docker run -it --rm --gpus all -v ~/.cache/mim:/root/.cache/mim ghcr.io/picagrad/cfwm-repro:0.1.1-cu124
+
+# On a cluster with Apptainer, a shell with your data and weights mounted
+apptainer shell --nv --bind $DATA:/data,$WEIGHTS:/weights docker://ghcr.io/picagrad/cfwm-repro:0.1.1-cu124
+```
+
+The image is built from [`docker/Dockerfile`](docker/Dockerfile). It contains NVIDIA software; see [License](#license).
+
+### Installing it yourself
+
+1. Install [CFM-Model-Zoo](https://github.com/picagrad/CFM-Model-Zoo#install) as its README describes, choosing its
+   pinned versions (`-c constraints-pinned.txt`).
+2. In the same environment, from a clone of this repository, install this package:
 
    ```bash
-   pip install -e .               # metrics to a CSV (the default, --tracking none)
-   pip install -e '.[mlflow]'     # also MLflow tracking (--tracking mlflow, see Tracking)
+   pip install --no-deps -r constraints-pinned.txt -e .
    ```
+
+   [`constraints-pinned.txt`](constraints-pinned.txt) lists every package and version, including CFM-Model-Zoo at
+   the pinned commit and MLflow for tracking. [Library version](#library-version) explains `--no-deps`.
 
 ## Data
 
@@ -164,9 +190,15 @@ hardware can differ more. REPRODUCE.md gives the tolerances that the published r
 
 ## Library version
 
-`pip` installs `cfm-model-zoo` from the commit pinned in `pyproject.toml`, and `compressai==1.2.8`. The published
-results were produced with exactly that commit; to use another library version, change the pin by hand (results are
-only guaranteed for the pinned one).
+This repository is pinned to one commit of CFM-Model-Zoo and to CompressAI 1.2.8, the versions the published results
+were produced with. Both pins are in `pyproject.toml` and in `constraints-pinned.txt`. You can point them at another
+library version by hand, but results are only guaranteed for the pinned one.
+
+**Why `--no-deps`.** CompressAI 1.2.8 says it needs a NumPy older than 2, but it works with NumPy 2, and our published
+results were produced with NumPy 2.3.5. Left to resolve dependencies itself, pip would follow CompressAI's claim and
+downgrade NumPy to 1.26. `constraints-pinned.txt` already lists the complete set of packages, so `--no-deps` tells pip
+to install exactly that list and nothing else. `pip check` will still report CompressAI's NumPy requirement; you can
+ignore it. The container image is installed the same way.
 
 ## AI assistance
 
@@ -182,6 +214,11 @@ published codec weights are licensed separately, under CC BY-NC 4.0. Third-party
 `third_party_licenses/`, and [`NOTICE`](NOTICE) lists what comes from where. The task models, and the
 split-model library they run through, are covered by the CFM-Model-Zoo repository's own licence and
 notices.
+
+The container image is built on NVIDIA's CUDA base image and contains NVIDIA software, under the
+[NVIDIA Deep Learning Container License](https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license)
+(its text is in the image at `/NGC-DL-CONTAINER-LICENSE`) and the [CUDA EULA](https://docs.nvidia.com/cuda/eula/index.html).
+This software contains source code provided by NVIDIA Corporation.
 
 ## Citation
 
